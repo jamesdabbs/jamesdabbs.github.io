@@ -6,6 +6,7 @@ tags:
 - 'test'
 - 'thing'
 - 'Thing with spaces in it'
+image: /assets/images/mbp.jpg
 ---
 > I remember how I felt the first time I made an API call - like a caveman who has just created fire.
 
