@@ -10,6 +10,8 @@ In my spare time, I hack on [my topology database](http://topology.jdabbs.com/),
 
 ## Graphs: a Drunkard's Walk
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bz5tgZLG5WI?list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU" frameborder="0" allowfullscreen></iframe>
+
 An intermediate Ruby Group talk on graphs and graph databases. Accompanied by [this Rails project](https://github.com/jamesdabbs/air-graphs), but note that shortly after this talk, a [neo4j 4.0](https://github.com/neo4jrb/neo4j) was released and is probably the preferred tool to use moving forward.
 
 ## Search: Postgres and Elastic
