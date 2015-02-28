@@ -3,9 +3,8 @@ layout: post
 title: 'Turn Down with Watts'
 date: 2014-06-22 16:59:03
 tags:
-- 'test'
-- 'thing'
-- 'Thing with spaces in it'
+- 'Hacks'
+- 'Ruby'
 ---
 _In which I wire up Twilio to my lights, in an effort to appease my neighbors…_
 
@@ -13,7 +12,7 @@ _In which I wire up Twilio to my lights, in an effort to appease my neighbors…
 
 I am a drummer, the noise-polluting bane of apartment dwellers everywhere. In an effort to find some sort of balance (_read: not get kicked out of the complex_), I picked up one of these so that I can shunt most of that noise into my headphones:
 
-![Roland V-Drums](/content/images/2014/Jun/280166.jpg)
+![Roland V-Drums](/assets/images/vdrums.jpg)
 
 Turns out though, if you hit a piece of plastic with a stick hard enough, it still makes a non-trivial amount of sound. To make matters worse, you _have_ to wear headphones if you want your drums to sound like drums and not sticks-hitting-bits-of-plastic … so I'd be completely oblivious if my neighbors called or started banging on a wall to complain about all the racket.
 
@@ -131,7 +130,7 @@ The full app has some other features - [error monitoring](https://github.com/jam
 
 I've had an earlier version of this app "in production" for several months now, and it has been used in earnest exactly zero times. Turns out the walls are pretty thick, and my neighbors are pretty cool. Also, people are quite a/bemused when you tell them about a project like this, which garners some goodwill. But hey, now I can do this:
 
-![Aziz! ... Lights!](/content/images/2014/Jun/photo.GIF)
+![Aziz! ... Lights!](/assets/images/drum-lights.gif)
 
 Rock on.
 

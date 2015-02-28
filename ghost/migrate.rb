@@ -13,7 +13,10 @@ posts, tags, post_tags = %w(posts tags posts_tags).map { |k| data.fetch k }
 posts.each do |p|
   next if p["page"] == 1 # Will port / re-write these manually
 
-  tags = ["test", "thing", "Thing with spaces in it"]
+  tag_ids = post_tags.select { |pt| pt["post_id"] == p["id"] }.map { |pt| pt["tag_id"] }
+  ts = tag_ids.map do |i|
+    tags.find { |t| t["id"] == i }["name"] # Meh ...
+  end
 
   date = DateTime.parse p.fetch "published_at"
   file_name = "#{date.strftime '%Y-%m-%d'}-#{p.fetch 'slug'}.md"
@@ -23,9 +26,9 @@ posts.each do |p|
     f.puts "layout: post"
     f.puts "title: '#{p.fetch 'title'}'"
     f.puts "date: #{date.strftime '%Y-%m-%d %H:%M:%S'}"
-    if tags.any?
+    if ts.any?
       f.puts "tags:"
-      tags.each { |t| f.puts "- '#{t}'" }
+      ts.each { |t| f.puts "- '#{t}'" }
     end
     f.puts "image: #{p['image']}" if p["image"]
     f.puts "---"

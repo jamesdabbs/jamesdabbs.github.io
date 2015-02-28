@@ -3,9 +3,8 @@ layout: post
 title: 'Working Smarter'
 date: 2014-05-21 01:22:55
 tags:
-- 'test'
-- 'thing'
-- 'Thing with spaces in it'
+- 'Technical'
+- 'Ruby'
 ---
 ####(In the Background)
 

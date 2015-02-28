@@ -3,10 +3,7 @@ layout: post
 title: 'To Build a Fire'
 date: 2014-12-16 01:18:19
 tags:
-- 'test'
-- 'thing'
-- 'Thing with spaces in it'
-image: /assets/images/mbp.jpg
+- 'Education'
 ---
 > I remember how I felt the first time I made an API call - like a caveman who has just created fire.
 

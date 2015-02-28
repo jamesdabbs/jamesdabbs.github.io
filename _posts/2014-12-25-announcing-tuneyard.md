@@ -3,12 +3,14 @@ layout: post
 title: 'Announcing: TuneYard'
 date: 2014-12-25 15:40:45
 tags:
-- 'test'
-- 'thing'
-- 'Thing with spaces in it'
-image: /assets/images/boop.png
+- 'Technical'
+- 'Sonic Pi'
+- 'SuperCollider'
+- 'Hacks'
 ---
 [TuneYard](https://github.com/jamesdabbs/tune_yard) is a lightweight gem providing a [Sonic Pi](http://sonic-pi.net/) remote, and letting you embed snippets like their provided examples inside any arbitrary Ruby code. My intention is to use this to power an [upcoming Iron Yard class](http://theironyard.com/locations/washington-dc/) project that I'm particularly excited about, but [let me know](mailto:jamesdabbs@gmail.com?subject=TuneYard) if you have something else in mind; I'd love to support more general use.
+
+![Camping goes boop](http://i.imgur.com/PoBSgdr.png)
 
 Big shout outs to [Sam Aaron](http://sam.aaron.name/) for developing [Sonic Pi](http://sonic-pi.net/) and [Overtone](http://overtone.github.io/), all [the Sonic Pi contributors](https://github.com/samaaron/sonic-pi/graphs/contributors) for all their work, and [tUnE-yArDs](http://tune-yards.com/) for the naming inspiration and development soundtrack.
 

@@ -3,9 +3,8 @@ layout: post
 title: 'Resquing Yesod'
 date: 2014-07-04 01:42:37
 tags:
-- 'test'
-- 'thing'
-- 'Thing with spaces in it'
+- 'Technical'
+- 'Haskell'
 ---
 ### Building a background worker system in Haskell
 
