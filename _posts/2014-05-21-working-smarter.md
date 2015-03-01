@@ -44,7 +44,7 @@ In order not to block the response, we'll have to do some multitasking, which in
 
 Your web (or DRb or whatever) server is running in a process. Most worker systems will start a separate manager process (usually with a `rake` task or something similar) that will spawn a collection of workers in either processes (DelayedJob, Resque) or threads (Sidekiq). If each worker requires a Rails app (which it usually does), that means Sidekiq can spin up a whole lot more workers with a whole lot less memory. The tradeoff there is that your code (including all of the gems that it depends on) _has_ to be threadsafe. Unless you like debugging thread race conditions (hint: you don't). [Caveat emptor](https://github.com/mperham/sidekiq/wiki/Problems-and-Troubleshooting#thread-safe-libraries).
 
-SuckerPunch is the outlier here - it runs jobs in threads inside your server process. If you think this is brittle, you are right. So why consider it? In a word: free <a href="#note1">[1]</a>. Because it runs entirely inside one process, you can have background workers on Heroku without forking out for an extra dyno (no pun intended).
+SuckerPunch is the outlier here - it runs jobs in threads inside your server process. If you think this is brittle, you are right. So why consider it? In a word: free<sup><a href="#fn1" id="ref1">1</a></sup>. Because it runs entirely inside one process, you can have background workers on Heroku without forking out for an extra dyno (no pun intended).
 
 ### Built-in Features
 
@@ -64,6 +64,6 @@ Now we write some code.
 
 Stay tuned for part two, in which I'll step through the process that we decide on in [the live coding session](http://www.meetup.com/atlantaruby/events/171941842/). If you're playing along at home, feel free to fork the [app we're starting from](https://github.com/jamesdabbs/air/tree/cats) and see what you come up with. This should be good:
 
-<a href="https://github.com/jamesdabbs/air/tree/cats">![](/content/images/2014/May/Screen-Shot-2014-05-20-at-9-38-08-PM-1.jpg)</a>
+<a href="https://github.com/jamesdabbs/air/tree/cats">![](/assets/images/cat-worker.jpg)</a>
 
-<a id="note1">[1]</a> In more words: [http://brandonhilkert.com/blog/why-i-wrote-the-sucker-punch-gem/](http://brandonhilkert.com/blog/why-i-wrote-the-sucker-punch-gem/)
+<sup id="fn1">1) In more words: [http://brandonhilkert.com/blog/why-i-wrote-the-sucker-punch-gem](http://brandonhilkert.com/blog/why-i-wrote-the-sucker-punch-gem) <a href="#ref1">↩</a></sup>

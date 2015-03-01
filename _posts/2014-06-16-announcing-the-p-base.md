@@ -12,7 +12,7 @@ _It's alive! [Go look](http://topology.jdabbs.com)!_
 The π-Base is a database of topological information, similar to Steen & Seebach's classic [Counterexamples in Topology](http://books.google.com/books/about/Counterexamples_in_Topology.html?id=DkEuGkOtSrUC), but with automated deduction and powerful search. It is the tool that I wished existed when I started looking into [cozero complemented](http://topology.jdabbs.com/properties/61) spaces, replacing a stultifying literature search with the following process:
 
 * Add the [cozero complemented property](http://topology.jdabbs.com/properties/61)
-* Record its relationships with other known properties: [perfectly normal](http://topology.jdabbs.com/theorems/180), [completely regular](http://topology.jdabbs.com/theorems/126) and [ccc](http://topology.jdabbs.com/theorems/145)
+* Record its relationships with other known properties: [perfectly normal](http://topology.jdabbs.com/theorems/127), [completely regular](http://topology.jdabbs.com/theorems/126) and [ccc](http://topology.jdabbs.com/theorems/145)
 * Let the site deduce what it can about the [examples it knows about](http://topology.jdabbs.com/spaces)
 * Query for [spaces which are not determined by the known theorems](http://topology.jdabbs.com/search?q=%3F%7B%2261%22%3Atrue%7D)
 

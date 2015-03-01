@@ -7,10 +7,10 @@ tags:
 - 'Sonic Pi'
 - 'SuperCollider'
 - 'Hacks'
+image: /assets/images/boop.png
 ---
 [TuneYard](https://github.com/jamesdabbs/tune_yard) is a lightweight gem providing a [Sonic Pi](http://sonic-pi.net/) remote, and letting you embed snippets like their provided examples inside any arbitrary Ruby code. My intention is to use this to power an [upcoming Iron Yard class](http://theironyard.com/locations/washington-dc/) project that I'm particularly excited about, but [let me know](mailto:jamesdabbs@gmail.com?subject=TuneYard) if you have something else in mind; I'd love to support more general use.
 
-![Camping goes boop](http://i.imgur.com/PoBSgdr.png)
 
 Big shout outs to [Sam Aaron](http://sam.aaron.name/) for developing [Sonic Pi](http://sonic-pi.net/) and [Overtone](http://overtone.github.io/), all [the Sonic Pi contributors](https://github.com/samaaron/sonic-pi/graphs/contributors) for all their work, and [tUnE-yArDs](http://tune-yards.com/) for the naming inspiration and development soundtrack.
 
@@ -183,4 +183,5 @@ It's certainly not perfect (instance variables, for instance), but it's Good Eno
 The finished (well, not _finished_ finished, but useable) product is available on [RubyGems](http://rubygems.org/gems/tune_yard) and [Github](https://github.com/jamesdabbs/tune_yard). I'll be building on it in class and pushing improvements as I do. Let me know if you're using this for a project; I'd love to get some idea of what to support, and to have an excuse to dig into Sonic Pi further and extract out a gem properly down the road.
 
 <sup id="fn1">1) My dear friend and colleague, who can be found [on the internet](http://blog.kingcons.io/), [the Twitter](https://twitter.com/redline6561), and [teaching Rails](http://theironyard.com/academy/rails-engineering/#class-schedule) at the Iron Yard in Atlanta.<a href="#ref1">↩</a></sup>
+
 <sup id="fn2">2) The original [scruby](https://github.com/maca/scruby) looks pretty solid, if a bit heavy on global state and metaprogramming. Ultimately, I decided leveraging and contributing to Sonic Pi would be a better use of time.<a href="#ref2">↩</a></sup>

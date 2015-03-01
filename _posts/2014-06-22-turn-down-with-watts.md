@@ -22,7 +22,7 @@ I, however, am not a reasonable man.
 
 # Overengineering a Solution
 
-I've had a set of [Philips Hue bulbs](http://meethue.com/) ever since seeing them at a previous ATLRUG meetup [1]. So here's the idea: spin up a Rails app on [Heroku](http://heroku.com) and integrate with [Twilio](https://www.twilio.com/) and the [Hue API](http://developers.meethue.com/) so that people can text a number to turn my lights red and I'll know to stop. 'Tis a gift to be simple.
+I've had a set of [Philips Hue bulbs](http://meethue.com/) ever since seeing them at a previous ATLRUG meetup<sup> <a href="#fn1" id="ref1">1</a></sup>. So here's the idea: spin up a Rails app on [Heroku](http://heroku.com) and integrate with [Twilio](https://www.twilio.com/) and the [Hue API](http://developers.meethue.com/) so that people can text a number to turn my lights red and I'll know to stop. 'Tis a gift to be simple.
 
 The full app is [on Github](https://github.com/jamesdabbs/aziz), but here are the interesting bits:
 
@@ -138,4 +138,4 @@ _A request: in the spirit of civility, please don't find and abuse the Heroku ap
 
 ---
 
-[1]: http://atlrug.com but the specific talk seems to predate the archives and my recollection is hazy, unfortunately.
+<sup id="fn1">1) http://atlrug.com but the specific talk seems to predate the archives and my recollection is hazy, unfortunately.<a href="#ref1">↩</a></sup>
