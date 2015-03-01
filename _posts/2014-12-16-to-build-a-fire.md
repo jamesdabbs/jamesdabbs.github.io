@@ -5,6 +5,7 @@ date: 2014-12-16 01:18:19
 tags:
 - 'Education'
 image: /assets/images/mbp.jpg
+permalink: /to-build-a-fire/
 ---
 > I remember how I felt the first time I made an API call - like a caveman who has just created fire.
 

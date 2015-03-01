@@ -5,6 +5,7 @@ date: 2014-06-22 16:59:03
 tags:
 - 'Hacks'
 - 'Ruby'
+permalink: /turn-down-with-watts/
 ---
 _In which I wire up Twilio to my lights, in an effort to appease my neighbors…_
 

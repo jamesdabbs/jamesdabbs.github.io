@@ -5,6 +5,7 @@ date: 2014-06-11 20:13:09
 tags:
 - 'Technical'
 - 'Ruby'
+permalink: /working-smarter-ii/
 ---
 _Video of this talk available [on Youtube](https://www.youtube.com/watch?v=GzpOw8u6OV8), with thanks to [Frank Rietta](http://rietta.com/)_
 

@@ -5,6 +5,7 @@ date: 2014-08-05 00:38:12
 tags:
 - 'Non-technical'
 - 'Work'
+permalink: /the-exit-interview/
 ---
 One week ago today, I started teaching Ruby on Rails at [The Iron Yard](http://theironyard.com/). Three days before that was my last day at [Emcien](http://emcien.com/). It's been a whirlwind and I've barely had time to catch my breath, but today [John Saddington reminded me](https://www.youtube.com/watch?v=TsEwQMEAWW0&index=4&list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU) how important it is to take time to reflect, so I'm doing that.
 

@@ -5,6 +5,7 @@ date: 2014-12-07 17:40:36
 tags:
 - 'Non-technical'
 - 'Failure'
+permalink: /double-fault/
 ---
 Growing up, I played a lot of tennis. My serve has never been the strongest part of my game, but I do remember one game in particular where I felt like I was hitting significantly better than usual. I was playing against my dad and must have been around twelve at the time. He won (he always did back then), but I was feeling pretty proud - many of the points had progressed into solid groundstroke rallies, and I didn’t have many of the halting starts and frustrating self-defeats of double-faulting away a point or game. After the set, Dad had a simple comment that changed the way I thought about the game - “you’re not double faulting enough”.
 

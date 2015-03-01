@@ -5,6 +5,7 @@ date: 2014-05-21 01:22:55
 tags:
 - 'Technical'
 - 'Ruby'
+permalink: /working-smarter/
 ---
 ####(In the Background)
 

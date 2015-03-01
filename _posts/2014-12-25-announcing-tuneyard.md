@@ -8,6 +8,7 @@ tags:
 - 'SuperCollider'
 - 'Hacks'
 image: /assets/images/boop.png
+permalink: /announcing-tuneyard/
 ---
 [TuneYard](https://github.com/jamesdabbs/tune_yard) is a lightweight gem providing a [Sonic Pi](http://sonic-pi.net/) remote, and letting you embed snippets like their provided examples inside any arbitrary Ruby code. My intention is to use this to power an [upcoming Iron Yard class](http://theironyard.com/locations/washington-dc/) project that I'm particularly excited about, but [let me know](mailto:jamesdabbs@gmail.com?subject=TuneYard) if you have something else in mind; I'd love to support more general use.
 

@@ -6,6 +6,7 @@ tags:
 - 'Haskell'
 - 'Projects'
 - 'Topology'
+permalink: /announcing-the-p-base/
 ---
 _It's alive! [Go look](http://topology.jdabbs.com)!_
 

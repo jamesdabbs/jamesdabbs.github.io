@@ -5,6 +5,7 @@ date: 2014-07-04 01:42:37
 tags:
 - 'Technical'
 - 'Haskell'
+permalink: /resquing-yesod/
 ---
 ### Building a background worker system in Haskell
 

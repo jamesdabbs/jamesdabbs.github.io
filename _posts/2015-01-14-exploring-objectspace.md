@@ -8,8 +8,9 @@ tags:
 - 'Introspection'
 - 'TracePoint'
 image: /assets/images/mbp2.jpg
+permalink: /exploring-objectspace
 ---
-I recently had a very interesting conversation with [Chris Hoffman](https://twitter.com/yarmiganosca) at [DCRUG](http://www.meetup.com/dcruby), talking about how to explore the object graph of a highly complex Rails app. I've been mulling over some of his ideas and found myself with a few hours to kill on a flight from Austin, so I dug in and did the following rather enjoyable bit of spelunking. 
+I recently had a very interesting conversation with [Chris Hoffman](https://twitter.com/yarmiganosca) at [DCRUG](http://www.meetup.com/dcruby), talking about how to explore the object graph of a highly complex Rails app. I've been mulling over some of his ideas and found myself with a few hours to kill on a flight from Austin, so I dug in and did the following rather enjoyable bit of spelunking.
 
 Here's what I want -
 
