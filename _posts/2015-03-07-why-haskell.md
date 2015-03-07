@@ -55,13 +55,13 @@ Similarly, while Haskell is great for building a product that's going to be arou
 
 Most of those problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is one of community engagement, I'm very interested to hear what _you_ think:
 
-If you run a business, would you consider building on Haskell? If not, what's stopping you? Would you be willing to hire a dev and train them in your language? Would you hire a junior dev that _only_ knows Haskell?
+If you run a business, would you consider building on Haskell? If not, what's stopping you? How do you feel about bringing on new devs that need language training? Would you hire a junior dev that _only_ knows Haskell?
 
 If you don't know Haskell, would you consider learning it? If you have considered learning it, what stopped you? Lack of support materials? Of time? Of interest? Of employers?
 
 If you have learned Haskell, what do you wish you knew earlier? What do you feel is lacking or painful? What would you think of presenting it as a first language? Is it hard because it's so different from other languages? Is it that people insist on presenting the hard parts? Or is it honestly just intrinsically hard?
 
-If you have answers or questions or are interested in this discussion, please [tweet](https://twitter.com/jamesdabbs), retweet, or [email](mailto:jamesdabbs@gmail.com?subject=Why Haskell) me.
+If you have answers or questions or are just interested in this discussion, please [tweet](https://twitter.com/jamesdabbs), retweet, or [email](mailto:jamesdabbs@gmail.com?subject=Why Haskell) me.
 
 And [try Haskell](https://www.haskell.org/).
 
