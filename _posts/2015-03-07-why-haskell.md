@@ -5,7 +5,7 @@ date: 2015-03-07 15:40:45
 image: http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/2000px-Haskell-Logo.svg.png
 permalink: /why-haskell/
 ---
-I'm an unabashed fan of Haskell. When I mention that (as I am wont to do), people tend to dismiss it: "oh he's one of those academic types, he _would_ like Haskell." And I'll admit – I wrote [my master's](http://dml.cz/bitstream/handle/10338.dmlcz/141613/CommentatMathUnivCarolRetro_52-2011-3_9.pdf) on monads, and stumbled in to Haskell when someone told me that you could actually use them to _do_ things (pun very much intended). Yes, that's how I got to Haskell – but I've stayed because I believe it's a great step in solving some very hard problems that we as an industry face.
+I'm an unabashed fan of Haskell. When I mention that (as I am wont to do), people tend to dismiss it: "oh he's one of those academic types, he _would_ like Haskell." And I'll admit – I wrote [my master's](http://dml.cz/bitstream/handle/10338.dmlcz/141613/CommentatMathUnivCarolRetro_52-2011-3_9.pdf) on monads, and stumbled in to Haskell when someone told me that you could actually use monads to _do_ things (pun very much intended). Yes, that's how I got to Haskell – but I've stayed because I believe it's a great step in solving several of the software industry's hard problems.
 
 # For Building
 
@@ -33,19 +33,19 @@ I'm very interested in the idea of Haskell as a first language. I'm 100% sold on
 
 ### Constraints, Creativity, and Experimentation
 
-Writing Haskell is a tightly-constrained activity. I take that as a positive. Certainly, it stops you from making many mistakes. But as someone who's taught a lot of Ruby, the "you can do anything you want" wide-open solution space can be completely overwhelming to a beginner. It's nice to have a language with a strong opinion of what's right. In general, constraints breed creativity.
+Writing Haskell is a tightly-constrained activity. I take that as a positive. Certainly, it stops you from making many kinds of mistakes. But as someone who's taught a lot of Ruby, the "you can do anything you want" wide-open solution space can be completely overwhelming to a beginner. It's nice to have a language with a strong opinion of what's right. In general, constraints breed creativity.
 
-The compiler having your back is such a huge boon to learning. You are free to experiment, confident that if it compiles, it's probably correct. No hidden bugs popping up later or far away – if your code has a problem, you'll get an explicit (if initially opaque) message telling you where and why. Refactoring in Haskell is as fun to me now as playing with Legos was twenty years ago, with much the same feel. It takes surprisingly little mental energy – you can often switch your brain off and let the compiler do all the hard work.
+Moreover, the compiler having your back is a huge boon to learning. You are free to experiment, confident that if it compiles, it's probably correct. No hidden bugs popping up later or far away – if your code has a problem, you'll get an explicit (if initially opaque) message telling you where and why. Refactoring in Haskell is as fun to me now as playing with Legos was twenty years ago, with much the same feel. It takes surprisingly little mental energy – you can often switch your brain off and let the compiler do all the hard work.
 
 ### Foundational Concepts
 
-I'll be the first to admit that Haskell has a reputation of being hard to learn. Some people wear this as a badge of honor – "oh, you want to print something? Ok, first let me tell you about the monad laws …". While I understand that reflex, I think it's actively harmful to the Haskell community. You can absolutely be productive in Haskell without really grokking monads. For many years, the language didn't even _have_ monads! But people realized they were repeating several common patterns, and eventually – as good engineers do – found the right tool to abstract the solution.
+I'll be the first to admit that Haskell has a reputation of being hard to learn. Some people wear this as a badge of honor – "oh, you want to print something? Ok, first let me tell you about the monad laws …". While I understand that reflex, I think it's harmful to the Haskell community. You can absolutely be productive in Haskell without really grokking monads. For many years, the language didn't even _have_ monads! But people realized they were repeating several common patterns, and eventually – as good engineers do – found the right tool to abstract the solution.
 
 Category theory is a well-studied discipline that provides a very rich vocabulary for talking about functions and how they compose. [Vocabulary has an interesting relationship with thought](http://www.radiolab.org/story/91725-words/), and while it's not at all necessary to learn category theory _before_ Haskell, I do like that it exposes you to foundational concepts that will shape the way you think about all of the code you write. Once you recognize a monoid or a monad, once you've internalized ideas about functional purity, [it changes the code you write in other languages](http://awardwinningfjords.com/2015/03/03/my-weird-ruby.html). Writing modular programs well is very much about understanding composability – why remain willfully ignorant of the vast body of work done studying how functions compose?
 
 # Why Not Haskell?
 
-That's most of what excites me about Haskell, but it'd be unfair to pretend that it's perfect. The runtime is incredibly sophisticated, but that makes it hard to reason about at times. There are certainly situations where I'd reach for C or Rust instead for low-level, performance critical code. But I think the more significant problems for Haskell to address are around the ecosystem and tooling. Cabal hell is certainly a problem and tooling is [spotty, but improving](http://www.yesodweb.com/blog/2014/11/case-for-curation) (though [Hoogle](https://www.haskell.org/hoogle/?hoogle=%28a+-%3E+b%29+-%3E+%5ba%5d+-%3E+%5bb%5d) is amazing).
+Haskell is exciting and promising, but it'd be unfair to pretend that it's perfect. The runtime is incredibly sophisticated, but that makes it hard to reason about at times. There are certainly situations where I'd reach for C or Rust instead for low-level, performance critical code. But I think the more significant problems for Haskell to address are around the ecosystem and tooling. Cabal hell is certainly a problem and tooling is [spotty, but improving](http://www.yesodweb.com/blog/2014/11/case-for-curation) (though [Hoogle](https://www.haskell.org/hoogle/?hoogle=%28a+-%3E+b%29+-%3E+%5ba%5d+-%3E+%5bb%5d) is amazing).
 
 As I see it, the biggest problem is that you can't "just jump in" to Haskell. I'm coming from the Ruby world where a potential learner can have a blog running in 15 minutes. This makes it much easier to experiment with the platform, and invariably some of the folks that try it out end up liking it and using it. Again, [Yesod](http://www.yesodweb.com/) seems to be making some great strides in that direction.
 
@@ -53,15 +53,15 @@ Similarly, while Haskell is great for building a product that's going to be arou
 
 # What Next?
 
-Most of these problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is largely one of community engagement, I'm very interested to hear what _you_ think:
+Most of those problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is largely one of community engagement, I'm very interested to hear what _you_ think:
 
 If you run a business, would you consider building on Haskell? If not, what's stopping you? Would you be willing to hire a dev and train them in your language? Would you hire a junior dev that _only_ knows Haskell?
 
-If you don't know Haskell, would you consider learning it? If not, what's stopping you? Lack of support materials? Of time? Of interest? Market concerns?
+If you don't know Haskell, would you consider learning it? If you have considered learning it, what stopped you? Lack of support materials? Of time? Of interest? Of employers?
 
-If you have learned Haskell, what do you wish you knew earlier? What do you feel is lacking? What would you think of presenting it as a first language? Is it hard because it's so different from other languages? Is it that people insist on presenting the hard parts? Or is it honestly just intrinsically hard?
+If you have learned Haskell, what do you wish you knew earlier? What do you feel is lacking or painful? What would you think of presenting it as a first language? Is it hard because it's so different from other languages? Is it that people insist on presenting the hard parts? Or is it honestly just intrinsically hard?
 
-If you're interested in this discussion, please [tweet](https://twitter.com/jamesdabbs) or [email](mailto:jamesdabbs@gmail.com?subject=Why Haskell) me.
+If you have answers or questions or are interested in this discussion, please [tweet](https://twitter.com/jamesdabbs), retweet, or [email](mailto:jamesdabbs@gmail.com?subject=Why Haskell) me.
 
 And [try Haskell](https://www.haskell.org/).
 
