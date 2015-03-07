@@ -53,7 +53,7 @@ Similarly, while Haskell is great for building a product that's going to be arou
 
 # What Next?
 
-Most of those problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is largely one of community engagement, I'm very interested to hear what _you_ think:
+Most of those problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is one of community engagement, I'm very interested to hear what _you_ think:
 
 If you run a business, would you consider building on Haskell? If not, what's stopping you? Would you be willing to hire a dev and train them in your language? Would you hire a junior dev that _only_ knows Haskell?
 
