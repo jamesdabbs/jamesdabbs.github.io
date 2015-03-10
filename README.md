@@ -8,6 +8,4 @@ See the live site at [jdabbs.com](http://jdabbs.com)
 
 # TODO
 
-* Check and update image links, code style, etc.
-* Spell check
-* Deploy and redirect
+* Optimize assets / resize images / check on mobile
