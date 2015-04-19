@@ -8,6 +8,12 @@ I teach [Ruby at The Iron Yard in DC](http://theironyard.com/locations/washingto
 
 In my spare time, I hack on [my topology database](http://topology.jdabbs.com/), contribute to [the Peace Corps](https://github.com/PeaceCorps/medlink), [play the drums](http://jdabbs.com/turn-down-with-watts/), and talk about stuff like:
 
+## Webdev in Haskell @ Polyglot DC
+
+[![](http://i.imgur.com/4IA6alw.png)](https://s3.amazonaws.com/jdabbs.com/hello-yesod.pdf)
+
+This talk was not recorded, unfortunately, but [slides](https://s3.amazonaws.com/jdabbs.com/hello-yesod.pdf) and a [demo project](https://github.com/jamesdabbs/hello-yesod) are available.
+
 ## Graphs: a Drunkard's Walk
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bz5tgZLG5WI?list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU" frameborder="0" allowfullscreen></iframe>
