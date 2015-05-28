@@ -8,6 +8,12 @@ I teach [Ruby at The Iron Yard in DC](http://theironyard.com/locations/washingto
 
 In my spare time, I hack on [my topology database](http://topology.jdabbs.com/), contribute to [the Peace Corps](https://github.com/PeaceCorps/medlink), [play the drums](http://jdabbs.com/turn-down-with-watts/), and talk about stuff like:
 
+## Processes and Threads @ RailsConf
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_8X96hMaRXI" frameborder="0" allowfullscreen></iframe>
+
+A gentle introduction to processes and threads in Ruby, through the lens of Resque and Sidekiq. But really it's about reading code.
+
 ## Webdev in Haskell @ Polyglot DC
 
 [![](http://i.imgur.com/4IA6alw.png)](https://s3.amazonaws.com/jdabbs.com/hello-yesod.pdf)
