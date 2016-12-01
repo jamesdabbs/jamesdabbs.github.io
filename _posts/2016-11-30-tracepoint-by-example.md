@@ -2,6 +2,10 @@
 layout: post
 title: 'TracePoint by Example'
 permalink: /tracepoint-by-example
+tags:
+- 'Technical'
+- 'Ruby'
+date: 2016-11-30 19:26:11
 ---
 
 `TracePoint` is a uniquely powerful sledgehammer for introspecting Ruby programs. In this post, we'll take a look at what tracing can do by sketching a couple utilities.
