@@ -14,7 +14,7 @@ The basic idea behind `TracePoint` is registering low-level hooks in the Ruby VM
 
 I haven't profiled any of the following (but you could build a basic profiler with `TracePoint`!), and would have some concerns about over-tracing or robust error handling for production code, but these sorts of traces can be _great_ for exploring how a program executes in development, as the following examples suggest - 
 
-# 1. Watching for monkeypatching
+# Watching for monkeypatching
 
 Monkeypatching is the act of reopening an existing class to add your own functionality. While it's neat and can be helpful for small projects, it's [often considered a bad idea](https://www.google.com/q=monkeypatching+considered+evil) as it can cause some confusing collisions.
 
@@ -98,9 +98,9 @@ in <file>
 ```
 
 
-# 2. Tracing Exception Handling
+# Tracing Exception Handling
 
-This is the example that inspired this post. I wanted to better understand where Rail's exception backtrace logging was coming from, but - unsurprisingly - the backtrace itself wasn't much help. So how do you answer a question like "where does this error go after it gets raised" in a system you're not as familiar with? Well, you can trace and examine where methods on that error object are called.
+This is the example that inspired this post. I wanted to better understand where Rails' exception backtrace logging was coming from, but - unsurprisingly - the backtrace itself wasn't much help. So how do you answer a question like "where does this error go after it gets raised" in a system you're not as familiar with? Well, you can trace and examine where methods on that error object are called.
 
 ```ruby
 class Trace
@@ -216,7 +216,7 @@ In this particular case, we see something like
 
 and I know exactly where to go look next.
 
-# 3. Enforcing Idempotence
+# Enforcing Idempotence
 
 An idempotent method is one that always returns the same value, no matter how many times you call it, and is generally a Good Idea™. Referentially transparent methods have to be idempotent, and methods on value objects should generally be idempotent as well. We can use `TracePoint` to _enforce_ that (e.g. by raising an error whenever that contract is violated in development).
 
