@@ -8,7 +8,13 @@ I teach [Ruby at The Iron Yard in DC](http://theironyard.com/locations/washingto
 
 In my spare time, I hack on [my topology database](http://topology.jdabbs.com/), contribute to [the Peace Corps](https://github.com/PeaceCorps/medlink), [play the drums](http://jdabbs.com/turn-down-with-watts/), and talk about stuff like:
 
-## Processes and Threads @ RailsConf
+## Composition @ RubyConf 2016
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zwo7ZTHS8Wg" frameborder="0" allowfullscreen></iframe>
+
+Our work as programmers consists largely of problem decomposition and solution recomposition. This talk is interested in how we cobble small units together into cohesive solutions. We'll examine and compare both object and functional composition, using a Haskell-inspired, functional style of Ruby. Along the way, we'll see how good functional principles can improve our object-oriented design, and vice versa.
+
+## Processes and Threads @ RailsConf 2015
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_8X96hMaRXI" frameborder="0" allowfullscreen></iframe>
 
