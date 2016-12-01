@@ -12,7 +12,9 @@ In my spare time, I hack on [my topology database](http://topology.jdabbs.com/),
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zwo7ZTHS8Wg" frameborder="0" allowfullscreen></iframe>
 
-Our work as programmers consists largely of problem decomposition and solution recomposition. This talk is interested in how we cobble small units together into cohesive solutions. We'll examine and compare both object and functional composition, using a Haskell-inspired, functional style of Ruby. Along the way, we'll see how good functional principles can improve our object-oriented design, and vice versa.
+On functional and object composition and how they aren't so different as you might think. From the abstract:
+
+> Our work as programmers consists largely of problem decomposition and solution recomposition. This talk is interested in how we cobble small units together into cohesive solutions. We'll examine and compare both object and functional composition, using a Haskell-inspired, functional style of Ruby. Along the way, we'll see how good functional principles can improve our object-oriented design, and vice versa.
 
 ## Processes and Threads @ RailsConf 2015
 
