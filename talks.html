@@ -1,0 +1,46 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+---
+
+<div class="talks">
+  {% for talk in site.data.talks %}
+  <section>
+    <h1>
+      <a name="{{ talk.title }}" href="#{{ talk.title }}">
+        <span class="title">
+          {{ talk.title }}
+        </span>
+      </a>
+    </h1>
+    <h2>
+      <span class="punctuation medium">@</span>
+      {{ talk.location }}
+      <span class="medium date">
+        {{ talk.date }}
+      </span>
+    </h2>
+    <div class="row">
+      {% if talk.attachments %}
+      <div class="attachments">
+        {% for attachment in talk.attachments %}
+        {% if attachment.youtube %}
+        <div class="video-container">
+          <iframe class="video" src="{{ attachment.youtube }}" allowfullscreen></iframe>
+        </div>
+        {% else %}
+        <a href="{{ attachment.image.href }}">
+          <img src="{{ attachment.image.src }}" alt="{{ attachment.image.alt }}">
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      <div class="description">
+        {{talk.description | markdownify }}
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+</div>

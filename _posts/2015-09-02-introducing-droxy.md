@@ -8,10 +8,11 @@ _Nods to [Foxy Shazam](https://www.youtube.com/watch?v=nWiNN_pA9cA) for the titl
 
 This morning, I realized I was tired of typing `docker-machine ip $FOO`. So I wrote [a thing](https://github.com/jamesdabbs/droxy) to route requests to `http://$NAME.dock:$PORT` on to the [docker-machine](https://docs.docker.com/machine/) running at `docker-machine ip $NAME`.
 
-![Automation](https://imgs.xkcd.com/comics/automation.png)
-
 Sitting here atop my pile of yak hair, I'd like to a take a minute to reflect on what I built and - more importantly - what I learned along the way. I've long been intrigued by [Pow](pow.cx) and know that I learn with my hands, so digging in and building something similar sounded exciting. Here's what I found:
 
+<!--more-->
+
+![Automation](https://imgs.xkcd.com/comics/automation.png)
 
 ## How Pow Works
 

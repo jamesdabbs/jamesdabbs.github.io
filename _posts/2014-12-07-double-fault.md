@@ -7,7 +7,10 @@ tags:
 - 'Failure'
 permalink: /double-fault/
 ---
+
 Growing up, I played a lot of tennis. My serve has never been the strongest part of my game, but I do remember one game in particular where I felt like I was hitting significantly better than usual. I was playing against my dad and must have been around twelve at the time. He won (he always did back then), but I was feeling pretty proud - many of the points had progressed into solid groundstroke rallies, and I didn’t have many of the halting starts and frustrating self-defeats of double-faulting away a point or game. After the set, Dad had a simple comment that changed the way I thought about the game - “you’re not double faulting enough”.
+
+<!--more-->
 
 His point was this: if all you’re trying to do is get the second serve in, you’re not putting any pressure on your opponent, and you’re putting him in the driver’s seat from the start. By focusing only on not losing, you’ve all but guaranteed you won’t win. The stats seem to bear this out <sup><a href="http://www.nytimes.com/2010/08/30/sports/tennis/30serving.html">1</a></sup> - male pros make ~65% of their first serves and win ~75% of those that go in; on the second serve, they make ~90% but are lucky to win half of those that they make. You’re better off serving all-out, even if that means that you lose a few points to double faults along the way.
 

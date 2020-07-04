@@ -7,9 +7,10 @@ tags:
 - 'Ruby'
 permalink: /working-smarter/
 ---
-####(In the Background)
 
-Basic apps are often alive only inside the request-response cycle: a user asks your server for something, the server does its thing, sends back some HTML, and sits there waiting for the next user. Breaking out of that loop means one of two things, tautologically - starting before getting a request, or continuing after returning a response. The specifics vary from app to app, but there's usually quite a lot that goes on that your users really shouldn't have to wait on. I've found myself backgrounding:
+_(In the Background)_
+
+Basic apps are often alive only inside the request-response cycle: a user asks your server for something, the server does its thing, sends back some HTML, and sits there waiting for the next user. Breaking out of that loop means one of two things, tautologically - starting before getting a request, or continuing after returning a response. The specifics vary from app to app, but there's usually quite a lot that goes on that your users really shouldn't have to wait on. <!--more--> I've found myself backgrounding:
 
 * Sending emails
 * Indexing documents into ElasticSearch

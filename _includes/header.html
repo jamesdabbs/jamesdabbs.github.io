@@ -1,5 +1,16 @@
-<!-- header start -->
+<header class="header">
+  <h1>
+    <span class="logo">JD</span>
+    James Dabbs
+  </h1>
 
-<a href="{{ site.url }}" class="logo-readium"><span class="logo" style="background-image: url({{ site.logo }})"></span></a>
-
-<!-- header end -->
+  <nav>
+    <ul class="nav">
+      {% for item in site.data.nav %}
+      <li class="{% if item.path == page.url %}active{% endif %}">
+        <a href="{{ item.path }}">{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

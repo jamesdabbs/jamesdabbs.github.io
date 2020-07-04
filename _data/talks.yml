@@ -1,0 +1,143 @@
+- title: Reason & React
+  location: Santa Barbara JavaScript
+  date: Sep 2019
+  attachments:
+  - image:
+      alt: Reason & React Slides
+      src: https://s3.amazonaws.com/jdabbs.com/2019-sbjs-reason-react-cover.png
+      href: https://slides.com/jamesdabbs/reason-react-sbjs
+  description: |
+    A short overview of [ReasonML](https://reasonml.github.io/) and
+    [ReasonReact](https://reasonml.github.io/reason-react/).
+
+    * [Slides](https://slides.com/jamesdabbs/reason-react-sbjs)
+
+- title: Category Theory for the Working Programer
+  location: Santa Barbara JavaScript
+  date: Jul 2019
+  attachments:
+  - image:
+      alt: Category Theory Slides
+      src: https://s3.amazonaws.com/jdabbs.com/2019-sb-js-categories-cover.png
+      href: https://s3.amazonaws.com/jdabbs.com/2019-sb-js-categories.pdf
+  description: |
+    Similar to a [much older talk](#Categories%20for%20the%20Working%20Programmer),
+    but updated with what I've learned over the last 7 (!) years, and reframed
+    for a JavaScript audience. Incidentally, if you're looking for a nice
+    exploration of monads in JS, I highly recommend [James Sinclair's blog post](https://jrsinclair.com/articles/2019/elegant-error-handling-with-the-js-either-monad/).
+
+    * Slides - [PDF](https://s3.amazonaws.com/jdabbs.com/2019-sb-js-categories.pdf) / [Markdown](https://gist.github.com/jamesdabbs/0599503c2aa2abef8cf304790874ed62)
+    * [Code](https://gist.github.com/jamesdabbs/e675d511ec67c984f123be174a51bef7)
+
+- title: "Refactoring Live: Primitive Obsession"
+  location: RailsConf
+  date: May 2019
+  attachments:
+  - youtube: https://www.youtube.com/embed/LhX5COR8WXc
+  description: |
+    Let's roll up our sleeves and clean up some smelly code. In this session,
+    we'll dig in to Primitive Obsession - what happens when our domain logic is
+    all wrapped up in primitive data types? And most importantly, how do we
+    untangle it?
+
+    * [Video](https://www.youtube.com/watch?v=LhX5COR8WXc)
+    * [Slides](https://slides.com/jamesdabbs/refactoring-live-primitive-obsession)
+    * [Code](https://github.com/jamesdabbs/greatbook)
+
+- title: Incompleteness
+  location: Nerd Nite
+  date: May 2018
+  attachments:
+  - image:
+      alt: Incompleteness Slides
+      src: https://s3.amazonaws.com/jdabbs.com/2018-nerd-nite-incompleteness-cover.png
+      href: https://slides.com/jamesdabbs/incompleteness
+  description: |
+    A [Nerd Nite](https://dc.nerdnite.com/2018/05/11/nerd-nite-for-may-19-2018/) presentation.
+
+    > We’ll examine Gödel’s Incompleteness Theorems and explore the gap between truth and proof. How can we prove that something is unprovable? And what happens when a mathematician becomes certain of the limits of his own certainty?
+
+    * [Slides](https://slides.com/jamesdabbs/incompleteness)
+
+- title: Composition
+  location: RubyConf
+  date: Nov 2016
+  attachments:
+  - youtube: https://www.youtube.com/embed/zwo7ZTHS8Wg
+  description: |
+    On functional and object composition and how they aren't so different as you might think. From the abstract:
+
+    > Our work as programmers consists largely of problem decomposition and solution recomposition. This talk is interested in how we cobble small units together into cohesive solutions. We'll examine and compare both object and functional composition, using a Haskell-inspired, functional style of Ruby. Along the way, we'll see how good functional principles can improve our object-oriented design, and vice versa.
+
+    * [Video](https://www.youtube.com/watch?v=zwo7ZTHS8Wg)
+    * [Slides](https://slides.com/jamesdabbs/composition)
+
+- title: Processes and Threads
+  location: RailsConf
+  date: Apr 2015
+  attachments:
+  - youtube: https://www.youtube.com/embed/_8X96hMaRXI
+  description: |
+    A gentle introduction to processes and threads in Ruby, through the lens of Resque and Sidekiq. But really it's about reading code.
+
+    * [Video](https://www.youtube.com/watch?v=_8X96hMaRXI)
+
+- title: Webdev in Haskell
+  location: Polyglot DC
+  date: Apr 2015
+  attachments:
+  - image:
+      alt: Yello Yesod
+      src: https://i.imgur.com/4IA6alw.png
+      href: https://s3.amazonaws.com/jdabbs.com/hello-yesod.pdf
+  description: |
+    An introduction to Yesod and exploring what's possible with a Haskell-on-Rails-style
+    development ethos.
+
+    * [Slides](https://s3.amazonaws.com/jdabbs.com/hello-yesod.pdf)
+    * [Code](https://github.com/jamesdabbs/hello-yesod)
+
+- title: "Graphs: a Drunkard's Walk"
+  location: Atlanta Intermediate Ruby
+  date: Sep 2014
+  attachments:
+  - youtube: https://www.youtube.com/embed/Bz5tgZLG5WI?list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU
+  description: |
+    An intermediate Ruby Group talk on graphs and graph databases. Accompanied by [this Rails project](https://github.com/jamesdabbs/air-graphs), but note that shortly after this talk, a [neo4j 3.0](https://github.com/neo4jrb/neo4j) was released and is probably the preferred tool to use moving forward.
+
+- title: 'Search: Postgres and Elastic'
+  location: Atlanta Intermediate Ruby
+  date: Jun 2014
+  date:
+  attachments:
+  - youtube: https://www.youtube.com/embed/-2Df3yeueU4?list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU
+  - youtube: https://www.youtube.com/embed/bMCSdZwPM6M?list=PLqZY2tk6rSRn2Vapk2raOTFjXGiDbpQUU
+  description: |
+    A fireside chat with [Kylie Stradley](https://twitter.com/kyfast) on the use and relative merits of Postgres and ElasticSearch for full-text searching.
+
+- title: Using Background Workers
+  location: Atlanta Intermediate Ruby
+  date: May 2014
+  attachments:
+  - youtube: https://www.youtube.com/embed/GzpOw8u6OV8
+  description: |
+    An Intermediate Ruby Group talk on background workers, with accompanying blog in [two](http://jdabbs.com/working-smarter/) [parts](http://jdabbs.com/working-smarter-pt-ii/) and [source code](https://github.com/jamesdabbs/air/releases/tag/cats) (later [updated](https://github.com/jamesdabbs/dcrug-workers) for Rails 4.2 and a talk at [DCRUG](http://www.meetup.com/dcruby/)).
+
+- title: Categories for the Working Programmer
+  location: Atlanta Ruby Group
+  date: Sep 2013
+  attachments:
+  - youtube: https://www.youtube.com/embed/Pms3h4M8kbs
+  description: |
+    They say every functional programmer has to write a monad tutorial. I am no exception. This is a talk from the [Atlanta Ruby Group](http://www.atlrug.com/) where I try to sell a room full of Rubyists on category theory.
+
+    * [Video](https://www.youtube.com/watch?v=Pms3h4M8kbs)
+    * [Code](https://github.com/jamesdabbs/rb-monads)
+    * [Slides](https://speakerdeck.com/jdabbs/monads-at-atlrug)
+    * [Clojure code](https://github.com/jamesdabbs/clj-monads) for a similar talk from the [Atlanta Clojure meetup](http://www.meetup.com/Atl-Clj/)
+
+- title: An Intro to FFI
+  location: Atlanta Ruby Group
+  date: Apr 2013
+  description: |
+    A brief introduction to Ruby's [ffi gem](https://github.com/ffi/ffi), with [an example project](https://github.com/jamesdabbs/steffi) using it to wrap [the igraph library](http://igraph.org/redirect.html).

@@ -5,9 +5,12 @@ date: 2015-03-07 15:40:45
 image: http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/2000px-Haskell-Logo.svg.png
 permalink: /why-haskell/
 ---
+
 I'm an unabashed fan of Haskell. When I mention that (as I am wont to do), people tend to dismiss it: "oh he's one of those academic types, he _would_ like Haskell." And I'll admit – I wrote [my master's](http://dml.cz/bitstream/handle/10338.dmlcz/141613/CommentatMathUnivCarolRetro_52-2011-3_9.pdf) on monads, and stumbled in to Haskell when someone told me that you could actually use monads to _do_ things (pun very much intended). Yes, that's how I got to Haskell – but I've stayed because I believe it's a great step in solving several of the software industry's hard problems.
 
-# For Building
+<!--more-->
+
+## For Building
 
 If I were launching a startup today, I'd absolutely be willing to bet it on Haskell<sup><a href="#fn1" id="ref1">1</a></sup>. Here's why:
 
@@ -27,7 +30,7 @@ Admittedly, with Haskell's comparatively small userbase, it'll be hard to find t
 * While there aren't a ton of people out there with deep real-world experience, there are some very sharp folks who have been dabbling with Haskell and would love an opportunity to dive in and use it. Building on Haskell can be a big hiring advantage here.
 * In general, your best people are your best people because they've invested in learning and bettering themselves. You're going to attract and retain them by presenting them with a challenge that will let them learn and grow, and providing them with the support to rise to that challenge.
 
-# For Learning
+## For Learning
 
 I'm very interested in the idea of Haskell as a first language. I'm 100% sold on it as a second. Learning Haskell was the best thing I ever did for my Ruby skills. But there are upsides even for first time students:
 
@@ -43,7 +46,7 @@ I'll be the first to admit that Haskell has a reputation of being hard to learn.
 
 Category theory is a well-studied discipline that provides a very rich vocabulary for talking about functions and how they compose. [Vocabulary has an interesting relationship with thought](http://www.radiolab.org/story/91725-words/), and while it's not at all necessary to learn category theory _before_ Haskell, I do like that it exposes you to foundational concepts that will shape the way you think about all of the code you write. Once you recognize a monoid or a monad, once you've internalized ideas about functional purity, [it changes the code you write in other languages](http://awardwinningfjords.com/2015/03/03/my-weird-ruby.html). Writing modular programs well is very much about understanding composability – why remain willfully ignorant of the vast body of work done studying how functions compose?
 
-# Why Not Haskell?
+## Why Not Haskell?
 
 Haskell is exciting and promising, but it'd be unfair to pretend that it's perfect. The runtime is incredibly sophisticated, but that makes it hard to reason about at times. There are certainly situations where I'd reach for C or Rust instead for low-level, performance critical code. But I think the more significant problems for Haskell to address are around the ecosystem and tooling. Cabal hell is certainly a problem and tooling is [spotty, but improving](http://www.yesodweb.com/blog/2014/11/case-for-curation) (though [Hoogle](https://www.haskell.org/hoogle/?hoogle=%28a+-%3E+b%29+-%3E+%5ba%5d+-%3E+%5bb%5d) is amazing).
 
@@ -51,7 +54,7 @@ As I see it, the biggest problem is that you can't "just jump in" to Haskell. I'
 
 Similarly, while Haskell is great for building a product that's going to be around for a long time, startups often need to prove an idea quickly before committing to that kind of investment of time and money. In the Rails world, you can pull in a functional [auth layer](https://github.com/plataformatec/devise), [background worker system](http://sidekiq.org), or [payment module](https://github.com/peterkeen/payola) with a dozen lines of code. Working in Haskell, it too often feels like you're forced to re-invent the wheel and spend time working on things that _aren't_ your core business concern.
 
-# What Next?
+## What Next?
 
 Most of those problems are a matter of adoption, and would be resolved if more people built with or learned about Haskell. That's largely why I'm writing this. But as the problem is one of community engagement, I'm very interested to hear what _you_ think:
 

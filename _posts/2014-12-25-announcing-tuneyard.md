@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Announcing: TuneYard'
+title: TuneYard
 date: 2014-12-25 15:40:45
 tags:
 - 'Technical'
@@ -10,12 +10,14 @@ tags:
 image: /assets/images/boop.png
 permalink: /announcing-tuneyard/
 ---
+
 [TuneYard](https://github.com/jamesdabbs/tune_yard) is a lightweight gem providing a [Sonic Pi](http://sonic-pi.net/) remote, and letting you embed snippets like their provided examples inside any arbitrary Ruby code. My intention is to use this to power an [upcoming Iron Yard class](http://theironyard.com/locations/washington-dc/) project that I'm particularly excited about, but [let me know](mailto:jamesdabbs@gmail.com?subject=TuneYard) if you have something else in mind; I'd love to support more general use.
 
+<!--more-->
 
 Big shout outs to [Sam Aaron](http://sam.aaron.name/) for developing [Sonic Pi](http://sonic-pi.net/) and [Overtone](http://overtone.github.io/), all [the Sonic Pi contributors](https://github.com/samaaron/sonic-pi/graphs/contributors) for all their work, and [tUnE-yArDs](http://tune-yards.com/) for the naming inspiration and development soundtrack.
 
-# Motivation
+## Motivation
 
 As mentioned [last time](http://jdabbs.com/to-build-a-fire/), I'm taking a bottom-up approach with my next Ruby class. Brit<sup><a href="#fn1" id="ref1">1</a></sup> and I have been batting around concepts for a large project focusing on understanding controllers, and came up with one that I can't wait to try out. The rough idea is to have students pair off and create a script-instrument to play a server-song.
 
@@ -27,11 +29,11 @@ There are a few things that I find really exciting about this project:
 * It helps dispel that pernicious "Ruby is only good for Rails" mindset.
 * It's just cool.
 
-# Exploring Sonic Pi - An After Action Report
+## Exploring Sonic Pi - An After Action Report
 
 I was completely unfamiliar with the internals of Sonic Pi before starting on this (other than having used SuperCollider and Overtone a bit in the past). What follows was my process in exploring it. It almost certainly isn't the smartest. [Get at me](mailto:jamesdabbs@gmail.com?subject=You're an idiot&body=Here's why ...) with how you'd do better.
 
-## Where Are We?
+### Where Are We?
 
 I started off by doing a standard OSX install of Sonic Pi from `dmg`, which installs everything to `/Applications/Sonic Pi.app`:
 
@@ -59,7 +61,7 @@ A little poking through the `app` directory and I landed pretty quickly on a few
 
 `sonic-pi-server.rb` appears to spin up an [OSC server](http://opensoundcontrol.org/introduction-osc). Fortunately, I was _somewhat_ familiar with those after [an abortive attempt](https://github.com/jamesdabbs/scruby) at getting [scruby](https://github.com/maca/scruby) up to date<sup> <a href="#fn2" id="ref2">2</a></sup>. So my rough game plan at the moment is: verify that this code is actually what's running, then try to reverse engineer the OSC messages, and write my own client to produce similar messages. That plan didn't really hold up, but it was a reasonable place to start.
 
-## Inspect What You Expect
+### Inspect What You Expect
 
 First things first: we need some way of inspecting code in-flight. Were this a standard command-line app, I'd [`pry`](http://pryrepl.org/) liberally, but since this is a standalone application, it's trickier. [`remote-pry`](https://github.com/Mon-Ouie/pry-remote) might be an option, but I'm not really sure how the bundled Ruby interacts with `rbenv` or where to install it, so let's start with something more basic: logging. Again, I have no idea where a `puts` would end up (if anywhere), but can rig up something:
 
@@ -85,7 +87,7 @@ So, confirmed: the app runs this script directly.
 
 *Aside: at some point, I realized that `~/.sonic-pi/log` was a thing and started `tail`ing that as well, which was helpful but not essential.*
 
-## Messaging
+### Messaging
 
 Next up, let's see what messages we're passing:
 
@@ -112,7 +114,7 @@ That's certainly the "song" that I'm composing in the GUI, along with some other
 
 *Aside: as best I can tell, the `gui.send_raw` calls are just to feed results back to the GUI. We can support that guess by commenting it out and noticing that the in-GUI log doesn't update any more.*
 
-## Eval'ing Buffers - A Closer Look
+### Eval'ing Buffers - A Closer Look
 
 Digging into the `/save-and-run-buffer` handler, it looks like the magic is in
 
@@ -148,7 +150,7 @@ If we include that near the top of the server script, we get a couple pleasant c
 
 Sure enough, once we figure out how to `require` the referenced internal Sonic Pi libraries, we should be able to extract all this to an external script. [Take a peek at the gem implementation](https://github.com/jamesdabbs/tune_yard/blob/85381af78ba085deebcfe162c260e98f190c8f95/lib/tune_yard/player.rb#L7) if you're curious about that bit.
 
-## The Perils of Eval
+### The Evils of Eval
 
 So, we've got good progress (boops!), but we've got `eval` problems.
 
@@ -179,7 +181,7 @@ end
 
 It's certainly not perfect (instance variables, for instance), but it's Good Enough™ for an afternoon hack - and is at least fairly simple and short.
 
-# Result
+## Result
 
 The finished (well, not _finished_ finished, but useable) product is available on [RubyGems](http://rubygems.org/gems/tune_yard) and [Github](https://github.com/jamesdabbs/tune_yard). I'll be building on it in class and pushing improvements as I do. Let me know if you're using this for a project; I'd love to get some idea of what to support, and to have an excuse to dig into Sonic Pi further and extract out a gem properly down the road.
 

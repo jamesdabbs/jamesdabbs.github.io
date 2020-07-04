@@ -10,7 +10,10 @@ tags:
 image: /assets/images/mbp2.jpg
 permalink: /exploring-objectspace
 ---
+
 I recently had a very interesting conversation with [Chris Hoffman](https://twitter.com/yarmiganosca) at [DCRUG](http://www.meetup.com/dcruby), talking about how to explore the object graph of a highly complex Rails app. I've been mulling over some of his ideas and found myself with a few hours to kill on a flight from Austin, so I dug in and did the following rather enjoyable bit of spelunking.
+
+<!--more-->
 
 Here's what I want -
 
@@ -22,7 +25,7 @@ preferably with some option for filtering down to only classes "of interest" (i.
 
 Ultimately, I'd _love_ to produce a gem from this which mounts as a Rails engine exposing a rich D3 visualization of all those graphs. But it's a short flight, so let's start by proving the concept and make sure we have access to the data we need.
 
-# Ancestry
+## Ancestry
 
 First up: be able to summarize the lineage of each model (e.g. what they subclass / include, and from where).
 
@@ -32,7 +35,7 @@ First up: be able to summarize the lineage of each model (e.g. what they subclas
 # In e.g. `config/initializers/tycho.rb`
 module Tycho # don't sully up the global namespace
   class << self
-  
+
     def each_subclass klass
       ObjectSpace.each_object(Class).select { |k| k < klass }
     end
@@ -54,11 +57,11 @@ module Tycho # don't sully up the global namespace
       # This is rather ad-hoc, but it's safe to assume these
       # are always present
       return false if [Object, Kernel, BasicObject].include? mod
-      
+
       # There also seem to be a few of these. Not sure why;
       # this bears further investigation
       return false if mod.anonymous? && mod.instance_methods.empty?
-      
+
       true
     end
 
@@ -133,7 +136,7 @@ And moreover
  ActiveRecord::Core]
 ```
 
-# Relations
+## Relations
 
 This ended up being surprisingly easy to get the basics going, since Rails tracks so much reflective information about relations _[Ed: though, as [JD Isaacks](https://twitter.com/jisaacks) was so kind as to point out, it probably [misses some edges](https://github.com/jamesdabbs/tycho/issues/1)]_:
 
@@ -158,7 +161,7 @@ Which produces something like:
  :has_many=>[Order (call 'Order.connection' to establish a connection)]}
 ```
 
-# Tracing Messages
+## Tracing Messages
 
 The ultimate goal here is to record and summarize each message passed to or from (some subset of) objects in your app. Unsurprisingly, this is probably the hardest of the three goals above. A few considerations come to mind:
 
@@ -202,7 +205,7 @@ module Tycho
     end
   end
 end
-  
+
 Signal.trap "USR1" do
   warn "Starting trace (got USR1)"
   Tycho.observe!
@@ -216,6 +219,6 @@ end
 
 We can try this out by spinning up a `rails s`, doing `ps aux | grep rails` to note the pid, `kill -USR1 <pid>` to start recording, poke around the local server a bit, then `kill -USR2 <pid>` to stop logging (or just `tail -f /tmp/tycho.log` as the log updates).
 
-# Future Work
+## Future Work
 
 I've started [a repository](https://github.com/jamesdabbs/tycho) for this project and will work on making it more robust and adding more usable visualizations of these several graphs. This is definitely a low priority project at the moment though, so if it's something you'd be interested in using seriously, please [let me know](https://twitter.com/jamesdabbs) - I'd love to have some help, direction, or motivation to work on this more.

@@ -7,7 +7,10 @@ tags:
 - 'Ruby'
 permalink: /turn-down-with-watts/
 ---
+
 _In which I wire up Twilio to my lights, in an effort to appease my neighbors…_
+
+<!--more-->
 
 ---
 
@@ -21,13 +24,13 @@ This is the point where a reasonable man would just go talk to his neighbors and
 
 I, however, am not a reasonable man.
 
-# Overengineering a Solution
+## Overengineering a Solution
 
 I've had a set of [Philips Hue bulbs](http://meethue.com/) ever since seeing them at a previous ATLRUG meetup<sup> <a href="#fn1" id="ref1">1</a></sup>. So here's the idea: spin up a Rails app on [Heroku](http://heroku.com) and integrate with [Twilio](https://www.twilio.com/) and the [Hue API](http://developers.meethue.com/) so that people can text a number to turn my lights red and I'll know to stop. 'Tis a gift to be simple.
 
 The full app is [on Github](https://github.com/jamesdabbs/aziz), but here are the interesting bits:
 
-## How Many Developers Does It Take …
+### How Many Developers Does It Take …
 
 The Hue bulbs have a [fairly well documented API](http://developers.meethue.com/) and there are some [gems](https://github.com/soffes/hue) available. Unfortunately those are primarily focused on interacting with a set of bulbs on your local network, which won't cut it if we want to toggle the bulbs from Heroku. Fortunately, I know that e.g. the official Hue app can reach the bridge from an external network, so this must be possible …
 
@@ -67,7 +70,7 @@ Since this app is public / hosted on Heroku, I'm using `ENV` variables to store 
 The `clipmessage` / `sendmessage` business is essentially just a way to wrap up a regular API call and execute it remotely. In my case, I've already set up and hardcoded a group (`/groups/0`) consisting of the bulbs downstairs by the drums. With that in place, turning on the red light is just a matter of setting a few attributes on that group: `{"on": true, "sat": 255, "hue": 0}`.
 
 
-## Receiving Texts with Twilio
+### Receiving Texts with Twilio
 
 [Twilio](https://www.twilio.com/) provides several communication automation services, and I'm using their [SMS](https://www.twilio.com/sms)s. If you're playing along at home, you'll need to register a number and record your account SID and auth token, as well as getting a few credits for your account ($1/mo per number plus &#162;&#190; per text). From there, the [twilio-ruby gem](https://github.com/twilio/twilio-ruby) makes things fairly simple.
 
@@ -89,7 +92,7 @@ class MessagesController < ApplicationController
       from: params[:From],
       body: params[:Body]
     )
-    
+
     Light.alert!
 
     message.reply "Roger! Keeping it down momentarily…"
@@ -127,7 +130,7 @@ end
 
 The full app has some other features - [error monitoring](https://github.com/jamesdabbs/aziz/blob/87982c526c0f273d999eb9544d3ab052c60d9d62/config/initializers/rollbar.rb), [email notifications](https://github.com/jamesdabbs/aziz/blob/87982c526c0f273d999eb9544d3ab052c60d9d62/app/models/imposition.rb#L15), and [a traditional form input](https://github.com/jamesdabbs/aziz/blob/87982c526c0f273d999eb9544d3ab052c60d9d62/app/views/impositions/new.html.slim) ... but that's the MVP.
 
-# Living With It
+## Living With It
 
 I've had an earlier version of this app "in production" for several months now, and it has been used in earnest exactly zero times. Turns out the walls are pretty thick, and my neighbors are pretty cool. Also, people are quite a/bemused when you tell them about a project like this, which garners some goodwill. But hey, now I can do this:
 

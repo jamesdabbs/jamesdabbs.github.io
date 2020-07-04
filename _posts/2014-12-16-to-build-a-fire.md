@@ -13,6 +13,8 @@ A student made that comment (modulo paraphrasing) during my last Rails class at 
 
 I want each of my students to have that viscerally satisfying experience of creating fire themselves, and I’ve been thinking about how I can make that happen. I think the trick is in the tools - _don't give them a lighter, give them flint and kindling_.
 
+<!--more-->
+
 ## Questions, Not Answers
 
 

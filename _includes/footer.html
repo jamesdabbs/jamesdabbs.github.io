@@ -1,11 +1,10 @@
-<!-- footer start -->
-
-<footer class="site-footer">
-  <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-    <div class="inner">
-         <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-         <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-    </div>
+<footer class="footer">
+  <section>
+    <span class="punctuation medium">&copy;</span>
+    2016 - {{ site.time | date: '%Y' }} James Dabbs
+    <span class="dot">&bull;</span>
+    Made with <a href="http://jekyllrb.com"> Jekyll</a>,
+    <a href="https://ohnotype.co">@ohnotypeco</a> fonts,
+    and <span class="love">♥</span>
+  </section>
 </footer>
-
-<!-- footer end -->

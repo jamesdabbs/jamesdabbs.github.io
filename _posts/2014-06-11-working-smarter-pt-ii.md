@@ -13,7 +13,9 @@ _See [pt. I](http://jdabbs.ghost.io/working-smarter/) for background discussion_
 
 Okay. Worker platform: selected. Let's do this.
 
-### Listen to the Tests
+<!--more-->
+
+## Listen to the Tests
 
 _See commit [cbc86ea](https://github.com/jamesdabbs/air/commit/cbc86ea51badbcb99e7f11cd37cd7292f8260861)_
 
@@ -31,7 +33,7 @@ class Shell
   def initialize limit: 100
     @history, @limit = [], limit
   end
-  
+
   # Runs the command, maintaining a rolling window
   #   of recently executed commands
   def run cmd
@@ -51,7 +53,7 @@ After [adding an initializer](https://github.com/jamesdabbs/air/blob/cbc86ea51ba
 ```ruby
 class CatRequest < ActiveRecord::Base
   …
-  
+
   def fulfill
     Air.shell.run "sleep 5" # Pretend this is harder than it really is
     update_attributes cat: Cat.choose
@@ -68,7 +70,7 @@ expect( Air.shell.history.last ).to match /open.*#{req.cat.download_path}/
 
 Bonus: since we don't actually run the commands, our tests no longer have to do the five second wait thing either. Win!
 
-### Plumbing
+## Plumbing
 
 _See commits [7f18f3d](https://github.com/jamesdabbs/air/commit/7f18f3df8e5d320486afb9eb388fac0d2bbf0d60) and [0b6bb4a](https://github.com/jamesdabbs/air/commit/0b6bb4abb55b6ea600dfc46e8cc3aa3a1c3f3e19)_
 
@@ -105,7 +107,7 @@ Note that we're passing off the id of the Request that we want to fulfill, not t
 
 Good news! We're done. Fire up Sidekiq (with `bundle exec sidekiq`) and try it out - you should be able to hammer the button repeatedly and (after a short wait), get a whole [pounce](http://en.wikipedia.org/wiki/List_of_collective_nouns_in_English#cite_ref-sdzoo_1-18) of cat gifs.
 
-### Red ⇒ Green
+## Red ⇒ Green
 
 _See commit: [7d34a0e](https://github.com/jamesdabbs/air/commit/7d34a0e3fa197d85a315e9e53776813c27e62644)_
 
@@ -126,7 +128,7 @@ Sidekiq::Testing.inline!
 
 [As you can see](https://github.com/mperham/sidekiq/blob/015876bbd800b7a31e537eeb37f5581a29aeb96e/lib/sidekiq/testing.rb#L68), when running `inline!`d, Sidekiq simply fakes the Redis round-trip by dumping and loading though JSON and then calling perform directly, without sparking off a new thread.
 
-### Coping with Failure
+## Coping with Failure
 
 _See commit: [1223764](https://github.com/jamesdabbs/air/commit/122376454891096f862d39a60936ee550d840853)_
 

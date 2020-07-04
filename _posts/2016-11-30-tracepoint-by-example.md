@@ -10,11 +10,13 @@ date: 2016-11-30 19:26:11
 
 `TracePoint` is a uniquely powerful sledgehammer for introspecting Ruby programs. In this post, we'll take a look at what tracing can do by sketching a couple utilities.
 
+<!--more-->
+
 The basic idea behind `TracePoint` is registering low-level hooks in the Ruby VM to be able to react to events throughout our program. Possible "hooks" include "every time a thread starts", "every time a block is called", "every new line" and [many more](http://ruby-doc.org/core-2.0.0/TracePoint.html#class-TracePoint-label-Events), which allow you to implement some surprisingly wide-reaching features.
 
-I haven't profiled any of the following (but you could build a basic profiler with `TracePoint`!), and would have some concerns about over-tracing or robust error handling for production code, but these sorts of traces can be _great_ for exploring how a program executes in development, as the following examples suggest - 
+I haven't profiled any of the following (but you could build a basic profiler with `TracePoint`!), and would have some concerns about over-tracing or robust error handling for production code, but these sorts of traces can be _great_ for exploring how a program executes in development, as the following examples suggest -
 
-# Watching for monkeypatching
+## Watching for monkeypatching
 
 Monkeypatching is the act of reopening an existing class to add your own functionality. While it's neat and can be helpful for small projects, it's [often considered a bad idea](https://www.google.com/q=monkeypatching+considered+evil) as it can cause some confusing collisions.
 
@@ -98,7 +100,7 @@ in <file>
 ```
 
 
-# Tracing Exception Handling
+## Tracing Exception Handling
 
 This is the example that inspired this post. I wanted to better understand where Rails' exception backtrace logging was coming from, but - unsurprisingly - the backtrace itself wasn't much help. So how do you answer a question like "where does this error go after it gets raised" in a system you're not as familiar with? Well, you can trace and examine where methods on that error object are called.
 
@@ -116,7 +118,7 @@ class Trace
         #   `t.self` is the object which defines the method
         # We only care about the item we're watching
         next unless item == t.self
-        
+
         # We might only care about a known subset of methods
         next unless methods.nil? || methods.include?(t.method_id)
 
@@ -195,7 +197,7 @@ class MyController < ApplicationController
   def error
     raise Trace.watch "error", RuntimeError.new("whoops")
   end
-  
+
   def inspect
     calls = Trace.stop "error"
     binding.pry # to inspect
@@ -216,7 +218,7 @@ In this particular case, we see something like
 
 and I know exactly where to go look next.
 
-# Enforcing Idempotence
+## Enforcing Idempotence
 
 An idempotent method is one that always returns the same value, no matter how many times you call it, and is generally a Good Idea™. Referentially transparent methods have to be idempotent, and methods on value objects should generally be idempotent as well. We can use `TracePoint` to _enforce_ that (e.g. by raising an error whenever that contract is violated in development).
 
@@ -238,7 +240,7 @@ module Idempotizer
       # Somewhat fiddly, but if we `raise`, we'll end up triggering another `return`
       # event but with `return_value == nil` and we want the earlier return value
       ret   = t.return_value if t.return_value
-      
+
       # Call the method again (without traces) and compare the values
       check = t.disable { method.call }
       if check != ret
@@ -263,6 +265,6 @@ class Demo
 end
 ```
 
-# Other Ideas?
+## Other Ideas?
 
 Hopefully you get the gist of what `TracePoint` can do, and how to use it. These examples are just a jumping off point though - if you've got another nice hack, [let me know](mailto:jamesdabbs@gmail.com?subject=TracePoint).

@@ -1,53 +1,6 @@
-# Build settings
+description: |
+  Hustle bones comin' out my math
+excerpt_separator: <!--more-->
 highlighter: rouge
-
-# Site settings
-title: "James Dabbs"
-description: > # this means to ignore newlines until "email:"
-   Hustle bones comin' out my math
-
-email: jamesdabbs@gmail.com
-#blog logo
-logo: "/assets/images/jcd_logo.jpg"
-# blog cover
-cover: "/assets/images/books.jpg"
-cover_logo: "/assets/images/author.jpg"
-
-name: 'James Dabbs'
-author: 'James Dabbs'
-author_image: "/assets/images/author.jpg"
-
-paginate:	5
-
-url: "http://jdabbs.com" # the base hostname & protocol for your site
-baseurl: ""
-
-# social icons and sharing options
-social:
-  - icon:	twitter
-    url:	https://twitter.com/jamesdabbs
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
-
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: //www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
-
-  - icon:	github
-    url:	https://github.com/jamesdabbs
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
-
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+title: James Dabbs
+url: https://jdabbs.com
