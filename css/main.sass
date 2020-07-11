@@ -12,13 +12,14 @@ $love: #ea215a
 
 $heavy-line: 0.2em
 
-$header: 'Degular'
-$dense_header: 'Degular Display'
-$copy: 'Vulf Sans'
+$header: 'Raleway'
+$copy: 'Open Sans'
 $ornate: 'Hobeaux Rococeaux'
 
+@import 'pages/talks'
+
 body
-  font-family: $copy, san-serif
+  font-family: $copy, sans-serif
   padding: 1em 2em
 
 a
@@ -35,7 +36,7 @@ a
   color: $medium
 
 .punctuation
-  font-family: $ornate
+  font-family: $ornate, serif
 
 .love
   color: $love
@@ -58,7 +59,7 @@ pre.highlight
   border-bottom: $dark $heavy-line solid
   margin-bottom: 1em
 
-  font-family: $header, san-serif
+  font-family: $header, sans-serif
 
   .logo
     font-family: $ornate, serif
@@ -86,12 +87,17 @@ pre.highlight
       color: $accent
 
 .jumbotron
+  background-image: url("/assets/images/line.jpg")
+  background-size: contain
+  background-position: right
+  background-repeat: no-repeat
   padding-bottom: 1em
   border-bottom: $dark $heavy-line solid
 
   p
     font-size: 60px
-    font-weight: 800
+    font-weight: 900
+    letter-spacing: -2px
     line-height: 1.25em
 
   .me
@@ -135,51 +141,7 @@ pre.highlight
       padding: 0 0.35em
       margin-right: 0.125em
       font-size: 2.9em
-      font-family: $ornate
-
-.talks
-  p
-    margin-bottom: 0.8em
-
-  section
-    &:not(:last-child)
-      border-bottom: $medium 1px solid
-      margin-bottom: 1em
-
-    h1
-      .title
-        font-size: 32px
-        font-weight: 800
-
-    .video-container
-      background: $medium
-      position: relative
-      width: 100%
-      padding-bottom: 56.25%
-      border-radius: 4px
-
-    .video
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      border: 0
-      border-radius: 4px
-
-    img
-      border-radius: 4px
-
-    .row
-      display: flex
-      padding-bottom: 1em
-
-      .attachments
-        flex: 1
-        padding-right: 1em
-        margin-right: 1em
-      .description
-        flex: 1
+      font-family: $ornate, serif
 
 .about
   min-height: 240px

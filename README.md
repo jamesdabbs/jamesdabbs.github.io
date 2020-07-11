@@ -4,4 +4,9 @@ There are many like it
 But this one is mine
 ```
 
-See the live site at [jdabbs.com](http://jdabbs.com)
+Live at [jdabbs.com](http://jdabbs.com)
+
+## Useful Commands
+
+    # Serve and rebuild on changes
+    $ bundle exec jekyll serve --livereload
