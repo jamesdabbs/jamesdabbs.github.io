@@ -16,8 +16,6 @@ $header: 'Raleway'
 $copy: 'Open Sans'
 $ornate: 'Hobeaux Rococeaux'
 
-@import 'pages/talks'
-
 body
   font-family: $copy, sans-serif
   padding: 1em 2em
@@ -86,36 +84,8 @@ pre.highlight
     &:hover
       color: $accent
 
-.jumbotron
-  background-image: url("/assets/images/line.jpg")
-  background-size: contain
-  background-position: right
-  background-repeat: no-repeat
-  padding-bottom: 1em
-  border-bottom: $dark $heavy-line solid
-
-  p
-    font-size: 60px
-    font-weight: 900
-    letter-spacing: -2px
-    line-height: 1.25em
-
-  .me
-    float: left
-    width: 140px
-    border-radius: 70px
-    margin-right: 2em
-
-.next
-  display: flex
-
-  article
-    padding: 0.5em 0 1em
-    flex: 1
-
-    &:nth-child(1)
-      border-right: $dark $heavy-line solid
-      margin-right: 1em
+@import 'pages/home'
+@import 'pages/talks'
 
 .blog
   section
