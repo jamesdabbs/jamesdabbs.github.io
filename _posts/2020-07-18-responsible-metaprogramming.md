@@ -56,7 +56,7 @@ def base_with_field(name)
   # define a specialized subclass of `Base` with a named field
   Class.new(Base) do
     attr_accessor name
-  end.new
+  end
 end
 ```
 
@@ -94,16 +94,25 @@ The most straightforward way to dynamically define a method is the aptly-named [
 
 ```ruby
 class Base
-  %i[
-    foo
-    bar
-    baz
-  ].each do |word|
-    # Note: this block can take splat or keyword args, just like a normal method
-    define_method(:"#{word}ify") do |input|
-      "#{input}, #{word}ly"
+  def self.logging_attr_accessor(logger, *names)
+    names.each do |name|
+      define_method(name) do
+        value = instance_variable_get(:"@#{name}")
+        logger.info("Read #{name}=#{value}")
+        value
+      end
+
+      # Defined methods can take arguments - even *splats,
+      # keywords:, or &blocks - just like normal methods.
+      define_method(:"#{name}=") do |value|
+        instance_variable_set(:"@#{name}", value)
+        logger.info("Set #{name}=#{value}")
+        value
+      end
     end
   end
+
+  logging_attr_accessor Logger.new(STDOUT), :foo, :bar
 end
 ```
 
@@ -136,7 +145,22 @@ end
 
 * Use `method_missing` sparingly
 * Always define a [corresponding `respond_to_missing?`](https://thoughtbot.com/blog/always-define-respond-to-missing-when-overriding)
-* If possible, also define an explicit callable method, even if it's more verbose
+* If possible, also define an explicit callable method, even if it's more verbose.
+
+As an example, `rspec` uses `method_missing` to make these two equivalent
+
+    ```ruby
+    expect(result).to be_correct
+    expect(result.correct?).to eq true
+    ```
+
+which is definitely _cool_, but not really _necessary_. I tend to find it clearer and easier to maintain to have an single explicit method dedicated to handling those dynamic message
+
+    ```ruby
+    expect(result).to be(:correct)
+    ```
+
+I'm serious about "sparingly". I have exactly _one_ `method_missing` implementation in production right now. It's similar to the `MagicMap` example below, and I still periodically wonder if it was a good idea.
 
 ## Calling Methods
 
@@ -179,7 +203,7 @@ end
 
 ### `instance_eval` & `instance_exec`
 
-Less common, but you may want to dynamically change the _receiver_ of a block (the implicit `self`, the `@ivar` context). You can do that using [`instance_eval`](https://apidock.com/ruby/BasicObject/instance_eval)
+Less common, but you may want to dynamically change the _receiver_ of a block (the implicit `self` and the `@ivar` context). You can do that using [`instance_exec`](https://apidock.com/ruby/BasicObject/instance_exec) or [`instance_eval`]((https://apidock.com/ruby/BasicObject/instance_eval)
 
 ```ruby
 class MagicMap
@@ -195,7 +219,7 @@ class MagicMap
 
   def self.declare(&dsl)
     new.tap do |m|
-      m.instance_eval(&dsl)
+      m.instance_exec(&dsl)
     end.declarations
   end
 end
@@ -210,7 +234,7 @@ end
 Do note that this gives you another options for accessing instance variables, if you know the name of them
 
 ```ruby
-object.instance_eval do
+object.instance_exec do
   @foo = :bar
   @baz
 end
@@ -218,11 +242,9 @@ end
 
 This can similarly can be used to define methods, but I tend to prefer using the more purpose-tailored and intention-revealing methods.
 
-`instance_eval` allows you to pass in a string to eval. Don't use it.
+The only differences between `instance_exec` and `instance_eval` are that `instance_exec` allows you to pass arguments to your block (which is good) and `instance_eval` allows you to pass in a string to be evaluated as Ruby code (which is bad). As such, I generally use `instance_exec` alone, and avoid `instance_eval`.
 
-[`instance_exec`](https://apidock.com/ruby/v2_5_5/BasicObject/instance_exec) is just like `instance_eval`, except that it allows you to pass arguments to the block (and doesn't let you pass a string to eval). I almost always use this instead of `instance_eval`.
-
-`instance_eval` and `instance_exec` are powerful, but should be used sparingly. It can be _very_ surprising when `self` isn't what a user expects it to be.
+`instance_exec` is powerful, but should be used sparingly. It can be _very_ surprising when `self` isn't what a user expects it to be.
 
 ### `eval`
 
