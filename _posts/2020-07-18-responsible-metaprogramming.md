@@ -149,16 +149,16 @@ end
 
 As an example, `rspec` uses `method_missing` to make these two equivalent
 
-    ```ruby
-    expect(result).to be_correct
-    expect(result.correct?).to eq true
-    ```
+```ruby
+expect(result).to be_correct
+expect(result.correct?).to eq true
+```
 
 which is definitely _cool_, but not really _necessary_. I tend to find it clearer and easier to maintain to have an single explicit method dedicated to handling those dynamic message
 
-    ```ruby
-    expect(result).to be(:correct)
-    ```
+```ruby
+expect(result).to be(:correct?)
+```
 
 I'm serious about "sparingly". I have exactly _one_ `method_missing` implementation in production right now. It's similar to the `MagicMap` example below, and I still periodically wonder if it was a good idea.
 
@@ -334,9 +334,9 @@ class MethodWrapper
 
     wrapper = Module.new do # 4
       methods.each do |name|
-        define_method(name) do |*args|
+        define_method(name) do |*args, &block|
           handler.call(name) do # 6
-            super(*args) # 5
+            super(*args, &block) # 5
           end
         end
       end
