@@ -1,3 +1,11 @@
+- title: "Ruby Rogues: Refactoring"
+  date: Sep 2020
+  description: |
+    A conversation with the Ruby Rogues, covering refactoring, Haskell, learning,
+    and the impossibility of knowing.
+
+    * [Podcast](https://devchat.tv/ruby-rogues/rr-469-refactoring-with-james-dabbs/)
+
 - title: Reason & React
   location: Santa Barbara JavaScript
   date: Sep 2019
