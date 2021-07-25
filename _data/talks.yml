@@ -1,3 +1,19 @@
+- title: Exploring Kubernetes
+  location: JavaScriptLA
+  date: May 2021
+  attachments:
+  - youtube: https://www.youtube.com/embed/ubcpNQAWv5o
+  description: |
+    The Kubernetes ecosystem has a ton of new ideas and exciting tools, but it can be daunting to know how to start digging in.  This talk aims to provide some wayposts for your journey to explore Kubernetes. We’ll introduce some useful tools for inspecting and debugging and setting up a fast feedback loop, and we’ll try them out while developing a simple Kubernetes native Node.js application.
+
+    * [Video](https://youtu.be/ubcpNQAWv5o)
+    * [Slides](https://github.com/jamesdabbs/friday/blob/main/docs/jsla.deckset.pdf)
+    * [Example App](https://github.com/jamesdabbs/friday)
+    * Tools
+      * [Lens](https://k8slens.dev/)
+      * [skaffold](https://skaffold.dev/)
+      * [cdk8s](https://cdk8s.io/)
+
 - title: "Ruby Rogues: Refactoring"
   location: devchat.tv
   date: Sep 2020
