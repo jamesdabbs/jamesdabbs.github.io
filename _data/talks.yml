@@ -1,3 +1,22 @@
+- title: Community, Building
+  location: American Institute of Mathematics
+  date: Dec 2023
+  attachments:
+  - image:
+      alt: Community, Building
+      src: https://s3.amazonaws.com/jdabbs.com/2023-aim-community-building.png
+      href: https://s3.amazonaws.com/jdabbs.com/2023-aim-community-building.pdf
+  description: |
+    An informal talk at the American Institute of Mathematics on a software
+    engineer's perspective on building with humans, developer productivity,
+    and the challenges of engineering in large sociotechnical systems.
+
+    Part of AIM's "Open-source cyberinfrastructure supporting mathematics 
+    research" workshop [[1](https://github.com/aim-cyber-workshop-2023/),[2](https://aimath.org/pastworkshops/cyberinfrastructure.html)]
+
+    * [Video](https://vimeo.com/showcase/cyberinfrastructure)
+    * [Slides](https://s3.amazonaws.com/jdabbs.com/2023-aim-community-building.pdf)
+
 - title: Exploring Kubernetes
   location: JavaScriptLA
   date: May 2021
